@@ -12,4 +12,4 @@ docker-compose exec $COMPOSE_EXEC_FLAGS site /bin/bash -c "\
     rm -r sass_processed && \
     cp 502.html /assets/ && \
     cp logo.png /assets/ && \
-    cp robots.txt /assets/"
+    cp robots.txt /assets/"in/sh -c bash make_style.sh
