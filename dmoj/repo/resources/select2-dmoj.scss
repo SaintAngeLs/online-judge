@@ -1,4 +1,6 @@
 @import "vars";
+@import "vars-default";
+
 
 /* Hack to make dropdown background follow theming */
 .select2-dropdown {
@@ -60,7 +62,7 @@
         }
 
         &[aria-selected=true] {
-            background-color: $color_primary25;
+            background-color: $color_primary75_yonder;
         }
 
         .select2-results__option {

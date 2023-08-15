@@ -1,4 +1,6 @@
 @import "vars";
+@import "vars-default";
+
 
 .h-scrollable-table {
     overflow-x: auto;
@@ -19,7 +21,7 @@
     th {
         height: 2em;
         color: $color_primary0;
-        background-color: $color_primary75;
+        background-color: $color_primary75_yonder;
         border-color: $color_primary50;
         border-width: 0 1px 1px 0;
         border-style: solid;

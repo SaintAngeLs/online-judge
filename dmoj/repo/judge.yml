@@ -1,7 +1,7 @@
 # This is the same ID you specified in the judge admin panel.
-id: ExampleJudge
+id: judge0exam
 # The key this judge will use to authenticate with the site server, generated from the admin panel.
-key: "mmG9tyTfoYPoDfSUXg4MsTnlsLNi7DDORpMnh8BZ8n0MtOn0k/jSPzVj2vcdS0iZjq3GUT9YPJAppjnTl+2zL7PVz0cx53TOj9gL"
+key: "VSS6qX7nAbWKtUrOq9JsxbuzfEHH8Q5c0VVttD0vqIYlu1F"
 # Where to look for problems on the local filesystem.
 # Any directory matching any of the following globs with an init.yml file is assumed to be a problem directory.
 problem_storage_globs:

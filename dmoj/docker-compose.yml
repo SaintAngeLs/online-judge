@@ -65,7 +65,7 @@ services:
     working_dir: /site/
     env_file: [environment/mysql.env, environment/site.env]
     networks: [site, nginx, db]
-    depends_on: [base, db, redis]
+    depends_on: [base, db, redis, judge]
   celery:
     build:
       context: .
@@ -125,6 +125,21 @@ services:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks: [nginx]
     depends_on: [site, wsevent]
+  judge:
+    image: dmoj/runtimes-tier2:latest
+    container_name: judge-new1
+    restart: unless-stopped
+    ports:
+      - "9998:9998"
+    volumes:
+      - /problems:/problems
+    cap_add:
+      - SYS_PTRACE
+    command: run -p "9999" "localhost" "judge0exam" "VSS6qX7nAbWKtUrOq9JsxbuzfEHH8Q5c0VVttD0vqIYlu1F+qsQqjodz6rdodAY0dH11ySJazSf1tPbNfhBsSVnea3eVmaLfjeg8"
+    entrypoint: /bin/sh
+    networks: [site, nginx, db]
+    depends_on: [base]
+    
 networks:
   site:
   db:
